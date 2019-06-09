@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import RepositoryLanguageList from '../RepositoryLanguageList';
+import SummaryStats from '../SummaryStats';
 
  const GET_MAKETIME_TEAM = gql`
     query {
@@ -39,11 +40,13 @@ class Squad extends Component {
            if (loading) return 'Loading...';
            if (error) return `Error! ${error.message}`;
 
+            // console.log(data)
            return (
               <div>
-                  <img src={data.organization.avatarUrl} alt=""/>
-                  <h1>{data.organization.name}</h1>
+                  <img className="image-center" src={data.organization.avatarUrl} alt=""/>
+                  <h1 className="text-center">{data.organization.name}</h1>
                   <hr />
+                  <SummaryStats {...data.organization} />
                   <RepositoryLanguageList {...data.organization} />
               </div>
            );
