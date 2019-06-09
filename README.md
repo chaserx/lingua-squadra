@@ -1,3 +1,19 @@
+# Lingua Squadra
+
+## Motivation
+
+This is a plaything to examine Graphql basics using the GitHub API, to further enhance ReactJS skills, and to explore some D3-like frameworks like Victory. 
+
+With a given organzation name, it pulls the members of the organization (the first 100) and their public repositories (the first 100) and accumulates the primary languages of those repos. 
+
+![](./screenshot.png)
+
+
+---
+
+## Standard React Create APP readme output
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
