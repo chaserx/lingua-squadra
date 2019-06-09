@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BarChart from '../BarChart';
 
 class RepositoryLanguageList extends Component {
 
@@ -45,19 +46,18 @@ class RepositoryLanguageList extends Component {
     )
   }
 
-  // how do we want to display data
-  // bar graph; pie graph; ; just a series of rectangles
-  // there's an intersting dotmatrix plot
-  // https://arpitnarechania.github.io/d3-dotmatrix/
-  // if we do the dotmatrix thing, we'll need to reformat the data that's in
-  // state as the data set
-  //  { group: "MakeTimeInc" ,category: "Ruby", count: 42},
+  _format_results_for_d3() {
+    let data = []
+    for (let [lang, count] of Object.entries(this.state.languages)) {
+      data.push({x: lang, y: count})
+    }
+    return data;
+  }
 
   render() {
     return(
       <div>
-        Hello from RepositoryLanguageList
-        <p>{this._display_results_text()}</p>
+        <BarChart data={this._format_results_for_d3()} />
       </div>
     )
   }
