@@ -12,6 +12,11 @@ function App() {
           <Squad/>
         </Col>
       </Row>
+      <Row>
+        <Col sm="12">
+          <p className="text-center">Lingua Squadra is not affiliated with, sponsored by, or endorsed by GitHub.</p>
+        </Col>
+      </Row>
     </Container>
   );
 }
