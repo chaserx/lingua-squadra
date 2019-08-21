@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "apollo-cache-inmemory": "^1.6.2",
+    "apollo-cache-inmemory": "^1.6.3",
     "apollo-client": "^2.6.4",
     "apollo-link-http": "^1.5.15",
     "bootstrap": "^4.3.1",
