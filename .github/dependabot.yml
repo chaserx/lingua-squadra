@@ -1,0 +1,55 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: victory
+    versions:
+    - 35.4.10
+    - 35.4.11
+    - 35.4.12
+    - 35.4.13
+    - 35.4.7
+    - 35.4.8
+    - 35.4.9
+    - 35.5.0
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+    - 4.0.2
+  - dependency-name: d3
+    versions:
+    - 6.5.0
+    - 6.6.0
+    - 6.6.1
+    - 6.6.2
+  - dependency-name: "@babel/runtime"
+    versions:
+    - 7.12.13
+    - 7.12.18
+    - 7.12.5
+    - 7.13.10
+    - 7.13.4
+    - 7.13.7
+    - 7.13.8
+    - 7.13.9
+  - dependency-name: react-scripts
+    versions:
+    - 4.0.1
+    - 4.0.2
+  - dependency-name: react
+    versions:
+    - 16.14.0
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+  - dependency-name: handlebars
+    versions:
+    - 4.7.6
